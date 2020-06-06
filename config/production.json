@@ -7,7 +7,6 @@
     "max": 20
   },
   "mongo": {
-    "url": "mongodb://localhost:27017/nestAppDb",
-    "serverSelectionTimeoutMS": 5000
+    "url": "mongodb://localhost:27017/nestAppDb"
   }
 }

@@ -1,3 +1,2 @@
 mongo:
   url : MONGO_URL
-  serverSelectionTimeoutMS: MONGO_TIMEOUT

@@ -8,7 +8,7 @@ const mongooseClient = () => {
       useCreateIndex: true,
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      serverSelectionTimeoutMS: config.get('mongo').serverSelectionTimeoutMS
+      serverSelectionTimeoutMS: 5000
     }
   )
     .then(() => {
