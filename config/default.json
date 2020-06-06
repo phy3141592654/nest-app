@@ -1,0 +1,13 @@
+{
+  "host": "localhost",
+  "port": 8008,
+  "public": "../public/",
+  "paginate": {
+    "default": 20,
+    "max": 20
+  },
+  "mongo": {
+    "url": "mongodb://localhost:27017/nestAppDb",
+    "serverSelectionTimeoutMS": 5000
+  }
+}
