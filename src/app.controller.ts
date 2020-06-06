@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Req } from '@nestjs/common';
+import { Controller, Get, Post, Req, Query } from '@nestjs/common';
 import { AppService } from './app.service';
 import { Request } from 'express';
 
@@ -7,11 +7,15 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello(): object {
-    return this.appService.getHello();
+  getHealth(): object {
+    return this.appService.healthCheck();
   }
-  @Post()
-  postHello(@Req() request: Request): object {
+  @Get('users')
+  getUsers(@Query() query): object {
+    return this.appService.getUser(query);
+  }
+  @Post('users')
+  postUsers(@Req() request: Request): object {
     return this.appService.createUser(request.body);
   }
 }

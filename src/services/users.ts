@@ -12,3 +12,15 @@ export const createUser = async (input: any) => {
         throw e;
     }
 }
+
+export const getUser = async (query: any) => {
+    try {
+        let users = await Users.find(query);
+        return users;
+    }
+    catch (e) {
+        console.error(e);
+        throw e;
+    }
+}
+
